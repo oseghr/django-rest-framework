@@ -1,0 +1,12 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("all/", views.allLinks),
+    
+    path('', views.PostListApi),
+    path("add/", views.PostCreateApi),
+    path("<str:id>/", views.PostDetailApi),
+    path("del/<str:id>/", views.PostDeleteApi),
+    path("update/<str:id>/", views.PostUpdateApi),
+]

@@ -3,7 +3,7 @@ from django.forms import BooleanField
 
 # Create your models here.
 
-class Links(models.Model):
+class Link(models.Model):
     target_url = models.URLField(max_length=200)
     description = models.CharField(max_length=200)
     identifier = models.SlugField(max_length=20, blank=True, unique=True)
