@@ -9,4 +9,6 @@ urlpatterns = [
     path("<str:id>/", views.PostDetailApi),
     path("del/<str:id>/", views.PostDeleteApi),
     path("update/<str:id>/", views.PostUpdateApi),
+    path("active/", ActiveLinkView.as_view(), name=’active_link’),
+    path("recent/", RecentLinkView.as_view(), name=’recent_link’),
 ]
